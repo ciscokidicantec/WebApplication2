@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using MySql.Data.MySqlClient;
+
+
+
 namespace WebApplication2
 {
     public partial class WebForm1 : System.Web.UI.Page

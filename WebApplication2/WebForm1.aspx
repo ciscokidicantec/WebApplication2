@@ -15,6 +15,9 @@
                     <asp:BoundField DataField="estateid" HeaderText="estateid" ReadOnly="True" SortExpression="estateid" />
                 </Columns>
             </asp:GridView>
+            <br />
+            <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl="~/App_Data/helen.jpg" />
+            <br />
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:estate08022020connection %>" ProviderName="<%$ ConnectionStrings:estate08022020connection.ProviderName %>" SelectCommand="SELECT * FROM estate"></asp:SqlDataSource>
         </div>
     </form>
