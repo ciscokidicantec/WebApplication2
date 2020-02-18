@@ -16,7 +16,7 @@ namespace WebApplication2
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string tester = "Test1";
+            string tester = "Test";
             Button1.Text = tester;
         }
     }
