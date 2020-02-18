@@ -10,6 +10,12 @@
     <form id="form1" runat="server">
         <div>
             <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="estateid" DataSourceID="SqlDataSource1">
+                <Columns>
+                    <asp:BoundField DataField="estateid" HeaderText="estateid" ReadOnly="True" SortExpression="estateid" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:estate08022020connection %>" ProviderName="<%$ ConnectionStrings:estate08022020connection.ProviderName %>" SelectCommand="SELECT * FROM estate"></asp:SqlDataSource>
         </div>
     </form>
 </body>
