@@ -19,6 +19,14 @@
             <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl="~/images/helen.jpg" />
             <br />
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:estate08022020connection %>" ProviderName="<%$ ConnectionStrings:estate08022020connection.ProviderName %>" SelectCommand="SELECT * FROM estate"></asp:SqlDataSource>
+            <br />
+            <br />
+            <asp:GridView ID="GridView2" runat="server" DataSourceID="SqlDataSource2">
+            </asp:GridView>
+            <br />
+            <br />
+            <br />
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:newestateConnectionString %>" SelectCommand="SELECT * FROM room"></asp:SqlDataSource>
         </div>
     </form>
 </body>
