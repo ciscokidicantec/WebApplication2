@@ -18,25 +18,21 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            int myid;
-
-
-            string tester = "Test";
-            Button1.Text = tester;
 
             SqlCommand inscommand;
             SqlConnection conn;
+
+            SqlCommand inscommandtop;
+            SqlConnection conntop;
+            int myid;
+
 
             try
             {
 
                 string cs = ConfigurationManager.ConnectionStrings["newestateConnectionString"].ConnectionString;
-               conn = new System.Data.SqlClient.SqlConnection();
-               conn.ConnectionString = cs;
+                conn = new System.Data.SqlClient.SqlConnection();
+                conn.ConnectionString = cs;
 
                 string cmdtext = "SELECT * FROM room;";
                 inscommand = new System.Data.SqlClient.SqlCommand(cmdtext, conn);
@@ -51,6 +47,20 @@ namespace WebApplication2
                 conn.Close();
                 conn.Dispose();
 
+                conntop = new System.Data.SqlClient.SqlConnection(cs);
+                //conntop.ConnectionString = cs;
+
+
+                string cmdtexttop = "SELECT roomid FROM room;";
+                inscommandtop = new System.Data.SqlClient.SqlCommand(cmdtexttop, conntop);
+                conntop.Open();
+
+                GridView3.DataSource = inscommandtop.ExecuteReader();
+                GridView3.DataBind();
+
+                // inscommandtop.Dispose();
+                // conntop.Close();
+                //  conntop.Dispose();
 
 
 
@@ -76,6 +86,16 @@ namespace WebApplication2
                         break;
                 }
             }
+
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+
+            string tester = "Test";
+            Button1.Text = tester;
         }
     }
 }

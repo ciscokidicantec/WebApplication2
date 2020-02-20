@@ -26,12 +26,10 @@
             <br />
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:newestateConnectionString %>" SelectCommand="SELECT * FROM room"></asp:SqlDataSource>
             <br />
-            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:newestateConnectionString %>" SelectCommand="SELECT * FROM room"></asp:SqlDataSource>
-            <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="roomid" DataSourceID="SqlDataSource3">
-                <Columns>
-                    <asp:BoundField DataField="roomid" HeaderText="roomid" ReadOnly="True" SortExpression="roomid" />
-                    <asp:BoundField DataField="estateid" HeaderText="estateid" SortExpression="estateid" />
-                </Columns>
+            <br />
+            grid 3<br />
+            <br />
+            <asp:GridView ID="GridView3" runat="server">
             </asp:GridView>
             <br />
             <br />
