@@ -22,17 +22,19 @@ namespace WebApplication2
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlCommand inscommand;
-            SqlConnection conn;
             int myid;
 
 
             string tester = "Test";
             Button1.Text = tester;
 
+            SqlCommand inscommand;
+            SqlConnection conn;
+
             try
             {
-               string cs = ConfigurationManager.ConnectionStrings["newestateConnectionString"].ConnectionString;
+
+                string cs = ConfigurationManager.ConnectionStrings["newestateConnectionString"].ConnectionString;
                conn = new System.Data.SqlClient.SqlConnection();
                conn.ConnectionString = cs;
 
@@ -45,6 +47,14 @@ namespace WebApplication2
                 {
                     myid = (int)reader["roomid"];
                 }
+                inscommand.Dispose();
+                conn.Close();
+                conn.Dispose();
+
+
+
+
+
             }
             catch (MySqlException ex)
             {
@@ -66,10 +76,6 @@ namespace WebApplication2
                         break;
                 }
             }
-
-
-
-
         }
     }
 }

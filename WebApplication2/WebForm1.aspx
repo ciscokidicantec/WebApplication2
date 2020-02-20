@@ -24,9 +24,18 @@
             <asp:GridView ID="GridView2" runat="server" DataSourceID="SqlDataSource2">
             </asp:GridView>
             <br />
-            <br />
-            <br />
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:newestateConnectionString %>" SelectCommand="SELECT * FROM room"></asp:SqlDataSource>
+            <br />
+            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:newestateConnectionString %>" SelectCommand="SELECT * FROM room"></asp:SqlDataSource>
+            <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="roomid" DataSourceID="SqlDataSource3">
+                <Columns>
+                    <asp:BoundField DataField="roomid" HeaderText="roomid" ReadOnly="True" SortExpression="roomid" />
+                    <asp:BoundField DataField="estateid" HeaderText="estateid" SortExpression="estateid" />
+                </Columns>
+            </asp:GridView>
+            <br />
+            <br />
+            <br />
         </div>
     </form>
 </body>
