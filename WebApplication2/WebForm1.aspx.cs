@@ -61,10 +61,6 @@ namespace WebApplication2
                 // inscommandtop.Dispose();
                 // conntop.Close();
                 //  conntop.Dispose();
-
-
-
-
             }
             catch (MySqlException ex)
             {
