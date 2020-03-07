@@ -20,13 +20,7 @@
             <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:newestateConnectionString %>" SelectCommand="SELECT * FROM [roomtype]"></asp:SqlDataSource>
             <br />
             <br />
-            <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="roomtypeid" DataSourceID="SqlDataSource3">
-                <Columns>
-                    <asp:BoundField DataField="roomtypeid" HeaderText="roomtypeid" ReadOnly="True" SortExpression="roomtypeid" />
-                    <asp:BoundField DataField="roomname" HeaderText="roomname" SortExpression="roomname" />
-                    <asp:BoundField DataField="roomdescription" HeaderText="roomdescription" SortExpression="roomdescription" />
-                </Columns>
-            </asp:GridView>
+
             <br />
             <br />
             <br />
